@@ -1,7 +1,7 @@
 import axios, { AxiosInstance, AxiosResponse } from "axios";
 import { Resources } from "../enums/resources";
 import { BarChartItem } from "../components/PestleChart";
-import { apiUrl } from "./apiUrl";
+// import { apiUrl } from "./apiUrl";
 
 export type Resource = {
   name: string;
@@ -36,7 +36,7 @@ export type ChronicData = {
 };
 
 const bulletinsApi: AxiosInstance = axios.create({
-  baseURL: apiUrl+"/bulletins",
+  baseURL: "/bulletins",
   headers: {
     Accept: "application/json",
   },

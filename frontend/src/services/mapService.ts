@@ -1,12 +1,12 @@
 import axios from "axios";
 import { Feature } from "geojson";
-import { apiUrl } from "./apiUrl";
+// import { apiUrl } from "./apiUrl";
 // import { feature } from "topojson";
 
 // const apiUrl = import.meta.env.VITE_API_URL;
 
 const mapApi = axios.create({
-  baseURL: apiUrl + "/map",
+  baseURL: "/map",
   headers: {
     Accept: "application/json",
   },

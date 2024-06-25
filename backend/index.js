@@ -30,16 +30,16 @@ if (process.env.NODE_ENV === "production") {
     res.sendFile(path.resolve(__dirname, "frontend", "dist", "index.html"))
   );
 } else {
-  app.get("/", (req, res) => {
+  app.get("*", (req, res) => {
     res.send(
       "Bulletin Analytics API: Database api for Bulletin Analytics app."
     );
   });
 }
 
-app.use("*", (req, res) => {
-  res.sendStatus(200).send("Up and Running..");
-});
+// app.use("*", (req, res) => {
+//   res.sendStatus(200).send("Up and Running..");
+// });
 
 app.listen(port, () => {
   console.log("Server is up on port " + port);
